@@ -1,0 +1,10 @@
+@tailwind base;@tailwind components;@tailwind utilities;
+body{font-family:var(--f-body),sans-serif;color:#222}
+h1,h2,h3,h4{font-family:var(--f-head),sans-serif}
+.hero{clip-path:polygon(0 0,100% 0,100% 80%,55% 100%,0 72%)}
+.cut{clip-path:polygon(0 0,100% 0,100% 100%,22% 100%,0 86%)}
+.wedge{position:absolute;background:#d8d8d8;opacity:.9}
+.btn{display:inline-block;padding:.7rem 1.6rem;border-radius:999px;font-size:.9rem;font-weight:500;transition:.2s}
+.btn-w{background:#fff;color:#111}.btn-w:hover{background:#B8941F;color:#fff}
+.btn-o{border:1px solid #fff;color:#fff}.btn-o:hover{background:#fff;color:#111}
+.line{display:block;width:48px;height:2px;background:#B8941F;margin:.8rem 0}

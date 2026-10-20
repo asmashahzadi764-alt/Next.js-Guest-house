@@ -1,0 +1,17 @@
+{
+ "name":"Sundus Guest House Skardu","city":"Skardu","region":"Gilgit-Baltistan","country":"PK",
+ "address":"Sundus, Skardu, Gilgit-Baltistan, Pakistan","plusCode":"8J74+499",
+ "geo":{"lat":35.312757,"lng":75.606},
+ "rating":4.9,"reviewCount":70,
+ "phone":"","email":"",
+ "mapsUrl":"https://www.google.com/maps/search/?api=1&query=Sundus+Guest+House+Skardu",
+ "checkIn":"12:00","checkOut":"12:00","reception":"",
+ "amenities":["Parking","Restaurant","WiFi"],
+ "nearby":[{"name":"Chunda Valley","km":1.9},{"name":"Soq Valley","km":1.9}],
+ "rooms":[
+  {"id":"r1","name":"Standard Room","desc":"Placeholder: replace with the real room type from the Maps photos.","priceFrom":null,"image":"/images/room-1.jpg","verified":false},
+  {"id":"r2","name":"Family Room","desc":"Placeholder: replace with the real room type from the Maps photos.","priceFrom":null,"image":"/images/room-2.jpg","verified":false},
+  {"id":"r3","name":"Deluxe Room","desc":"Placeholder: replace with the real room type from the Maps photos.","priceFrom":null,"image":"/images/room-3.jpg","verified":false}
+ ],
+ "reviews":[]
+}

@@ -1,7 +1,7 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Kanit, DM_Sans } from 'next/font/google'
-const head = Kanit({ subsets: ['latin'], weight: ['400', '500', '600'], variable: '--f-head' })
+import { Playfair_Display, DM_Sans } from 'next/font/google'
+const head = Playfair_Display({ subsets: ['latin'], variable: '--f-head' })
 const body = DM_Sans({ subsets: ['latin'], variable: '--f-body' })
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'),

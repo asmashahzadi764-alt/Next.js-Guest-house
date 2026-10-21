@@ -1,17 +1,134 @@
 {
- "name":"Sundus Guest House Skardu","city":"Skardu","region":"Gilgit-Baltistan","country":"PK",
- "address":"Sundus, Skardu, Gilgit-Baltistan, Pakistan","plusCode":"8J74+499",
- "geo":{"lat":35.312757,"lng":75.606},
- "rating":4.9,"reviewCount":70,
- "phone":"","email":"",
- "mapsUrl":"https://www.google.com/maps/search/?api=1&query=Sundus+Guest+House+Skardu",
- "checkIn":"12:00","checkOut":"12:00","reception":"",
- "amenities":["Parking","Restaurant","WiFi"],
- "nearby":[{"name":"Chunda Valley","km":1.9},{"name":"Soq Valley","km":1.9}],
- "rooms":[
-  {"id":"r1","name":"Standard Room","desc":"Placeholder: replace with the real room type from the Maps photos.","priceFrom":null,"image":"/images/room-1.jpg","verified":false},
-  {"id":"r2","name":"Family Room","desc":"Placeholder: replace with the real room type from the Maps photos.","priceFrom":null,"image":"/images/room-2.jpg","verified":false},
-  {"id":"r3","name":"Deluxe Room","desc":"Placeholder: replace with the real room type from the Maps photos.","priceFrom":null,"image":"/images/room-3.jpg","verified":false}
+ "name": "Sundus Guest House Skardu",
+ "city": "Skardu",
+ "region": "Gilgit-Baltistan",
+ "country": "PK",
+ "address": "Sundus, Sondous, Skardu, Gilgit-Baltistan, Pakistan",
+ "plusCode": "8J74+499",
+ "geo": {
+  "lat": 35.3127877,
+  "lng": 75.6059873
+ },
+ "rating": null,
+ "reviewCount": null,
+ "phone": "+92 348 5045879",
+ "email": "",
+ "mapsUrl": "https://www.google.com/maps/place/Sundus+Guest+House+Skardu/@35.3127877,75.6059873,17z",
+ "checkIn": "12:00",
+ "checkOut": "12:00",
+ "reception": "Open 24 hours",
+ "amenities": [
+  "Parking",
+  "Restaurant",
+  "WiFi"
  ],
- "reviews":[]
+ "nearby": [
+  {
+   "name": "Chunda Valley",
+   "km": 1.9
+  },
+  {
+   "name": "Soq Valley",
+   "km": 1.9
+  }
+ ],
+ "rooms": [
+  {
+   "id": "r1",
+   "name": "Comfortable Rooms",
+   "desc": "Clean, neat rooms with private bathrooms.",
+   "priceFrom": null,
+   "image": "/images/room-1.jpg"
+  },
+  {
+   "id": "r2",
+   "name": "Family-Friendly Stay",
+   "desc": "A calm, peaceful place for families and groups.",
+   "priceFrom": null,
+   "image": "/images/room-2.jpg"
+  },
+  {
+   "id": "r3",
+   "name": "Food & Facilities",
+   "desc": "Restaurant, free WiFi and parking for guests.",
+   "priceFrom": null,
+   "image": "/images/room-3.jpg"
+  }
+ ],
+ "reviews": [
+  {
+   "author": "Rasheed Alam",
+   "rating": 5,
+   "text": "I had a wonderful stay at Sundus Guest House Skardu. The staff were exceptionally friendly, welcoming, and always ready to help with anything we needed. Their hospitality made us feel at home from the moment we arrived.",
+   "date": "3 months ago"
+  },
+  {
+   "author": "Amjad Ali",
+   "rating": 5,
+   "text": "Highly recommended place to stay in Skardu! The location is perfect—right in a prime area with easy access to major tourist …",
+   "date": "6 months ago"
+  },
+  {
+   "author": "Maeel Alee",
+   "rating": 5,
+   "text": "Sundus Guest House is truly an excellent and peaceful place to stay, where guests feel the comfort of home. The environment is very clean, calm, and attractive, making it appealing to every visitor. The rooms are well-maintained, …",
+   "date": "6 months ago"
+  },
+  {
+   "author": "Mehyar Ali",
+   "rating": 5,
+   "text": "Sundus Guest House in Skardu is a good place for travelers who want a peaceful and comfortable stay. The guest house offers clean and neat rooms with basic facilities like free WiFi, private bathrooms, and parking. …",
+   "date": "6 months ago"
+  }
+ ],
+ "videos": [
+  {
+   "id": "v1",
+   "title": "Guest house tour",
+   "src": "/videos/tour-1.mp4",
+   "poster": "/images/video-1.jpg"
+  },
+  {
+   "id": "v2",
+   "title": "Our rooms",
+   "src": "/videos/tour-2.mp4",
+   "poster": "/images/video-2.jpg"
+  },
+  {
+   "id": "v3",
+   "title": "Restaurant and food",
+   "src": "/videos/tour-3.mp4",
+   "poster": "/images/video-3.jpg"
+  },
+  {
+   "id": "v4",
+   "title": "Around Skardu",
+   "src": "/videos/tour-4.mp4",
+   "poster": "/images/video-4.jpg"
+  }
+ ],
+ "googleReviewsUrl": "https://www.google.com/maps/place/Sundus+Guest+House+Skardu/@35.3127877,75.6059873,17z",
+ "ratingVerified": false,
+ "explore": [
+  {
+   "name": "Chunda Valley",
+   "note": "1.9 km from the guest house",
+   "image": "/images/place-1.jpg"
+  },
+  {
+   "name": "Soq Valley",
+   "note": "1.9 km from the guest house",
+   "image": "/images/place-2.jpg"
+  },
+  {
+   "name": "Deosai National Park",
+   "note": "High-altitude plateau near Skardu",
+   "image": "/images/place-3.jpg"
+  },
+  {
+   "name": "Shangrila & Kachura Lakes",
+   "note": "Popular lakes near Skardu",
+   "image": "/images/place-4.jpg"
+  }
+ ]
 }

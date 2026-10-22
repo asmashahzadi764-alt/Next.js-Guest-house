@@ -1,5 +1,6 @@
 'use client'
 import { useEffect, useState, FormEvent, ReactNode } from 'react'
+import { Amp } from './Amp'
 type Room = { id: string; name: string; desc: string; priceFrom: number | null; image: string }
 type Rev = { rating: number | null; count: number | null; mapsUrl: string; items: { author: string; rating: number; text: string; date: string }[] }
 const ph = (u: string) => `url(${u}),linear-gradient(135deg,#24443d,#8a6a3a)`
@@ -17,7 +18,7 @@ export function Rooms() {
         <article key={x.id} className="overflow-hidden rounded-2xl bg-white shadow-md ring-1 ring-black/5">
           <div className="aspect-[4/3] bg-cover bg-center" style={{ backgroundImage: ph(x.image) }} />
           <div className="p-6">
-            <h3 className="text-xl font-semibold">{x.name}</h3>
+            <h3 className="text-xl font-semibold"><Amp t={x.name} /></h3>
             <p className="mt-2 text-gray-600">{x.desc}</p>
             <div className="mt-5 flex items-center justify-between border-t pt-4">
               <span className="font-semibold text-clay">{x.priceFrom ? `From Rs ${x.priceFrom}` : 'Ask for rate'}</span>
@@ -98,28 +99,8 @@ export function ContactForm() {
     </form>
   )
 }
-type Vid = { id: string; title: string; src: string; poster: string }
-export function VideoGallery() {
-  const v = useApi<Vid[]>('/api/videos')
-  const [i, setI] = useState(0)
-  if (!v || !v.length) return null
-  const c = v[i]
-  return (
-    <div>
-      <video key={c.id} className="aspect-video w-full rounded-2xl bg-black shadow-2xl ring-1 ring-gold/40" controls preload="metadata" poster={c.poster} src={c.src} />
-      <div className="mt-5 grid grid-cols-2 gap-4 md:grid-cols-4">
-        {v.map((k, n) => (
-          <button key={k.id} onClick={() => setI(n)} aria-label={`Play ${k.title}`} aria-pressed={n === i} className={`relative aspect-video overflow-hidden rounded-xl bg-cover bg-center text-left ring-2 transition ${n === i ? 'ring-gold' : 'ring-transparent hover:ring-white/40'}`} style={{ backgroundImage: `linear-gradient(180deg,rgba(10,26,45,.1),rgba(10,26,45,.85)),${ph(k.poster)}` }}>
-            <span className="absolute left-3 top-3 flex h-9 w-9 items-center justify-center rounded-full bg-gold text-sm text-ink">▶</span>
-            <span className="absolute inset-x-3 bottom-2 text-sm font-medium text-white">{k.title}</span>
-          </button>
-        ))}
-      </div>
-    </div>
-  )
-}
 export function Gallery() {
-  const imgs = Array.from({ length: 8 }, (_, k) => `/images/gallery-${k + 1}.jpg`)
+  const [imgs, setImgs] = useState<string[]>(Array.from({ length: 8 }, (_, k) => `/images/gallery-${k + 1}.jpg`))
   const [o, setO] = useState<number | null>(null)
   useEffect(() => {
     if (o === null) return
@@ -130,16 +111,15 @@ export function Gallery() {
     }
     window.addEventListener('keydown', h); return () => window.removeEventListener('keydown', h)
   }, [o, imgs.length])
-  const span = ['md:col-span-2 md:row-span-2', '', 'md:row-span-2', '', 'md:row-span-2', 'md:col-span-2', '', 'md:col-span-3']
   return (<>
-    <div className="grid auto-rows-[150px] grid-cols-2 gap-3 md:auto-rows-[190px] md:grid-cols-4">
+    <div className="columns-2 gap-3 md:columns-3">
       {imgs.map((u, k) => (
-        <button key={u} onClick={() => setO(k)} aria-label={`Open photo ${k + 1}`} className={`group relative overflow-hidden bg-cover bg-center ${span[k]}`} style={{ backgroundImage: ph(u) }}>
-          <span className="absolute inset-0 bg-navy/0 transition group-hover:bg-navy/25" />
+        <button key={u} onClick={() => setO(k)} aria-label={`Open photo ${k + 1}`} className="group mb-3 block w-full overflow-hidden rounded-xl">
+          <img src={u} alt={`Sundus Guest House photo ${k + 1}`} loading="lazy" onError={() => setImgs(a => a.filter(i => i !== u))} className="h-auto w-full transition duration-500 group-hover:scale-[1.03]" />
         </button>
       ))}
     </div>
-    {o !== null && (
+    {o !== null && imgs[o] && (
       <div role="dialog" aria-modal="true" aria-label="Photo viewer" className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4" onClick={() => setO(null)}>
         <img src={imgs[o]} alt={`Sundus Guest House photo ${o + 1}`} className="max-h-[85vh] max-w-full object-contain" onClick={e => e.stopPropagation()} />
         <button aria-label="Close" className="absolute right-5 top-4 text-4xl text-white" onClick={() => setO(null)}>×</button>

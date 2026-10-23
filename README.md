@@ -6,14 +6,11 @@ A responsive website for **Sundus Guest House**, a family-friendly guest house i
 
 ## Preview
 
-### Laptop
-![Laptop view](docs/screenshots/laptop.png)
+Click a link to view the screenshot.
 
-### Tablet
-![Tablet view](docs/screenshots/tablet.png)
-
-### Mobile
-![Mobile view](docs/screenshots/mobile.png)
+- [Laptop view](docs/screenshots/laptop.png)
+- [Tablet view](docs/screenshots/tablet.png)
+- [Mobile view](docs/screenshots/mobile.png)
 
 ## Features
 
@@ -69,8 +66,8 @@ public/
 Requirements: Node.js 18 or newer.
 
 ```bash
-git clone https://github.com/asmashahzadi764-alt/Next.js-Guest-house.git
-cd Next.js-Guest-house
+git clone https://github.com/asmashahzadi764-alt/Naxt.js-Guest-house.git
+cd Naxt.js-Guest-house
 npm install
 npm run dev
 ```
